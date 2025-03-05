@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "postbuild": "ls -la out" ,
     "deploy": "wrangler pages deploy .vercel/output/static",
     "start": "next start",
     "lint": "next lint"
